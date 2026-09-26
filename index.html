@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>TiledKristalizer</title>
+	    <link href="stylesheet.css" rel="stylesheet"/>
+	</head>
+	
+	<body class="bg-black text-white">
+	
+	    <div style="padding: 12; gap: 16; display: flex; flex-col; flex-direction: column;">
+	        <div style="text-align: center; display: flex; justify-content: center; flex-direction: column">
+	            <h1 style="margin: 0">TiledKristalizer</h1>
+				<span style="font-size: 12; margin-bottom: 6">Tiled Maps to Kristal (works with both Tilemaps and Tilesets)</span>
+	        </div>
+	        
+	        <div class="textbox-kaard">
+		        <div class="row">
+					<input type="file" id="fileInput" accept=".tmx,.tsx,.xml" style="font-size: 10; margin: 8 0"/>
+		            <span style="font-size: 12; color: #aaa; margin: 8 0">or you can place it on this textbox:</span>
+		        </div>
+				
+				<textarea id="xmlInput" placeholder="* Paste here the data."></textarea>
+			</div>
+			
+	        <div class="row" style="justify-content: space-between; margin: 8">
+	            <button class="btn" id="btnConvert">Convert</button>
+	            <span id="statusMsg" class="status"></div>
+	        </div>
+	
+			<div class="textbox-kaard" style="margin: 12">
+		        <div class="cool-header">
+		            <span>Output</span>
+		            <div class="row">
+		                <button class="btn" id="btnCopy">Copy</button>
+		                <button class="btn" id="btnDownload">Download</button>
+		            </div>
+		        </div>
+		        <textarea id="output" readonly placeholder="* Your lua code will be here."></textarea>
+	        </div>
+	    </div>
+	</body>
+	
+	<script src="script.js"></script>
+</html>
